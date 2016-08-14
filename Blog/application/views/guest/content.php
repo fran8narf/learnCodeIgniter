@@ -8,6 +8,7 @@
                     <h2 class="post-title"><?= $post->titulo_post ?></h2>
                     <h3 class="post-subtitle"><?= $post->descripcion_post ?></h3>
                 </a>
+                <img src="<?= $post->imagen_post?>" style="max-width: 500px;" >
                 <p class="post-meta">Posted by <a href="#">NarfOner</a> on <?= $post->fecha_post ?></p>
             </div>
             <hr>
