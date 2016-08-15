@@ -17,7 +17,7 @@ class Home extends CI_controller {
 		/*
 		 * Cargamos el modelo de manera que su scope solo alcance a la página Home.
 		 * Si tenemos un modelo con funciones globales debemos cargarlo en config/autoload.php 
-		 * en el apartado $autoload['model'] = array();
+		 * en el apartado $autoload['model'] = array('posts');
 		 */
 		$this->load->model("posts");
 		$result = $this->posts->getPosts();
