@@ -14,7 +14,11 @@ class Home extends CI_controller {
 
 		$data = array('post' => 'Blog', 'descripcion' => 'Bienvenido a mi sitio personal!');
 		$this->load->view("guest/header", $data);
-
+		/*
+		 * Cargamos el modelo de manera que su scope solo alcance a la página Home.
+		 * Si tenemos un modelo con funciones globales debemos cargarlo en config/autoload.php 
+		 * en el apartado $autoload['model'] = array();
+		 */
 		$this->load->model("posts");
 		$result = $this->posts->getPosts();
 
