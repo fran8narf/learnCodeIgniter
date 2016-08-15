@@ -19,8 +19,8 @@ class Home extends CI_controller {
 		 * Si tenemos un modelo con funciones globales debemos cargarlo en config/autoload.php 
 		 * en el apartado $autoload['model'] = array('posts');
 		 */
-		$this->load->model("posts");
-		$result = $this->posts->getPosts();
+		$this->load->model("post");
+		$result = $this->post->getPosts();
 
 		$data = array('consulta' => $result);
 		/*Mandomos el contenido de $result a nuestra vista 'content'*/

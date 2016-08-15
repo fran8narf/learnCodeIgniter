@@ -2,12 +2,12 @@
 	/**
 	* 
 	*/
-	class Article extends CI_controller
+	class Article extends CI_Controller
 	{
 		
-		public function post($name = '')
+		public function post($id)
 		{
-			$row = $this->post->getPostByName($name);
+			$row = $this->posts->getPostByName($id);
 			echo $row->titulo_post; //De la fila que nos devuelva la query, cogemos solo el título del post.
 		}
 	}
