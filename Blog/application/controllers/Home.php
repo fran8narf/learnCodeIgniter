@@ -15,8 +15,9 @@ class Home extends CI_controller {
 		$data = array('post' => 'Blog', 'descripcion' => 'Bienvenido a mi sitio personal!');
 		$this->load->view("guest/header", $data);
 
-		/**Recoger todos los elementos de la tabla "posts" de la BBDD*/
-		$result = $this->db->get("posts");
+		$this->load->model("posts");
+		$result = $this->posts->getPosts();
+
 		$data = array('consulta' => $result);
 		/*Mandomos el contenido de $result a nuestra vista 'content'*/
 		$this->load->view("guest/content", $data);
