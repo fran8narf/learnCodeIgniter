@@ -7,7 +7,8 @@
 		
 		public function post($name = '')
 		{
-			$this->post->getPostByName($name);
+			$row = $this->post->getPostByName($name);
+			echo $row->titulo_post; //De la fila que nos devuelva la query, cogemos solo el título del post.
 		}
 	}
  ?>
